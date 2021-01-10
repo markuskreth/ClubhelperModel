@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 
 import de.kreth.clubhelper.model.dao.PersonDao;
 import de.kreth.clubhelper.model.data.Adress;
@@ -18,7 +19,7 @@ import de.kreth.clubhelper.model.data.Contact;
 import de.kreth.clubhelper.model.data.Person;
 import io.swagger.annotations.ApiOperation;
 
-@Controller
+@RestController
 @RequestMapping("/person")
 @PreAuthorize("isAuthenticated()")
 public class PersonController
